@@ -43,6 +43,10 @@ public class Main {
                 a = Integer.parseInt(data[0]);
                 b = Integer.parseInt(data[1]);
             }
+            boolean biggerThanTen = (a>10 || b>10);
+            if(biggerThanTen){
+                throw new IOException("Оба числа должны быть меньше 10");
+            }
             int result = switch (actions[actionIndex]) {
                 case "+" -> a + b;
                 case "-" -> a - b;
